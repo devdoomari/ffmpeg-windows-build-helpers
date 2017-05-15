@@ -7,10 +7,11 @@ dependencies:
     - >-
       if [[ ! -d "$HOME/.local/debs" ]]; then \
         mkdir -p "$HOME/.local/debs"; cd "$HOME/.local/debs" \
-        && sudo apt-get download subversion curl texinfo g++ bison flex \
+        && sudo apt-get install subversion curl texinfo g++ bison flex \
              cvs yasm automake libtool autoconf gcc cmake git make pkg-config \
             zlib1g-dev mercurial unzip pax nasm \
             gcc-mingw-w64-i686 g++-mingw-w64-i686 \
+            libfl-dev binutils-mingw-w64-i686 \
       ; fi
   post:
     - sudo dpkg -i $HOME/.local/debs/*.deb
