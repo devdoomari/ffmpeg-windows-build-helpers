@@ -20,7 +20,7 @@ dependencies:
             libxml-namespacesupport-perl \
       ; fi
   post:
-    - sudo dpkg -i $HOME/.local/debs/*.deb
+    - sudo dpkg -i $HOME/.local/debs/*.deb || sudo apt-get -f install
     - cd $HOME/FFMPEG-WINDOWS-BUILD-HELPER
     - ./native_build/quick_cross_compile_no-non-free_no-gpl_using_packaged_mingw64.sh:
       timeout: 7200
