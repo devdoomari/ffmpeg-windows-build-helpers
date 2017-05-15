@@ -12,6 +12,9 @@ dependencies:
             zlib1g-dev mercurial unzip pax nasm \
             gcc-mingw-w64-i686 g++-mingw-w64-i686 \
             libfl-dev binutils-mingw-w64-i686 \
+            mingw-w64-i686-dev \
+            libsvn1 \
+            libtext-unidecode-perl libintl-perl libxml-libxml-perl \
       ; fi
   post:
     - sudo dpkg -i $HOME/.local/debs/*.deb
